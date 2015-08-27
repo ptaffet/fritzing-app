@@ -428,7 +428,7 @@ bool FolderUtils::createZipAndSaveTo(const QDir &dirToCompress, const QString &f
 	if (fakeCompression) {
 		QFile fzzFile(filepath);
 		fzzFile.open(QIODevice::WriteOnly);
-		fzzFile.write("This file needs to be opened with the special REV version of Fritzing.\n");
+		fzzFile.write("This file needs to be opened with the special version of Fritzing that allows uncompressed files.\n");
 
 		foreach(QFileInfo file, files) {
 			DebugDialog::debug("Examining " + file.fileName());
